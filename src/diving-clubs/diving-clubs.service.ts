@@ -14,7 +14,7 @@ export class DivingClubsService extends BaseService<DivingClub> {
     @InjectRepository(DivingClubEntity)
     protected readonly repository: Repository<DivingClubEntity>,
     protected readonly dataSource: DataSource,
-    private readonly addressService: AddressesService,
+    // private readonly addressService: AddressesService,
   ) {
     super(dataSource);
   }
@@ -53,7 +53,7 @@ export class DivingClubsService extends BaseService<DivingClub> {
     club: DivingClubPatchDto,
   ): DivingClub {
     if (club[key] instanceof AddressPatchDto) {
-      prev[key] = this.addressService.patchAddress(club[key]);
+      // prev[key] = this.addressService.patchAddress(club[key]);
     } else {
       return prev;
     }

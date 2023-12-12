@@ -5,21 +5,31 @@ import { DivingClubsController } from './diving-clubs/diving-clubs.controller';
 import { DivingClubsService } from './diving-clubs/diving-clubs.service';
 import { AddressesService } from './addresses/addresses.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DivingClubsModule } from './diving-clubs/diving-clubs-module';
+import { AddressEntity } from './@datas/AddressEntity';
+import { DivingClubEntity } from './@datas/DivingClubEntity';
+import { AddressesModule } from './addresses/addresses-module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'test',
-      entities: [],
+      type: 'mssql',
+      host: 'SURFACE-DAVID\\SQLEXPRESS',
+      port: 1433,
+      username: 'sa',
+      password: '123456pw$',
+      database: 'DivingClubs',
+      options: {
+        trustServerCertificate: true,
+        useUTC: true,
+      },
+      entities: [AddressEntity, DivingClubEntity],
       synchronize: true,
     }),
+    DivingClubsModule,
+    AddressesModule,
   ],
-  controllers: [AppController, DivingClubsController],
-  providers: [AppService, DivingClubsService, AddressesService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
