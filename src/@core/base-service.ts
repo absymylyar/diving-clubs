@@ -6,7 +6,7 @@ export abstract class BaseService<TModel extends Identifier> {
 
   constructor(protected readonly dataSource: DataSource) {}
 
-  async saveEntities(...models: TModel[]) {
+  async saveEntities(...models: TModel[]): Promise<TModel[]> {
     let result: TModel[];
     await this.dataSource.transaction(async (manager) => {
       result = await Promise.all(
@@ -14,6 +14,9 @@ export abstract class BaseService<TModel extends Identifier> {
       );
     });
     return result;
+  }
+  async saveEntity(model: TModel): Promise<TModel> {
+    return (await this.saveEntities(model))?.[0];
   }
 
   // protected getNextId(models: TModel[]): number {

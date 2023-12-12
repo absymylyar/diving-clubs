@@ -6,6 +6,8 @@ import { DivingClubsModule } from './diving-clubs/diving-clubs-module';
 import { AddressEntity } from './@datas/AddressEntity';
 import { DivingClubEntity } from './@datas/DivingClubEntity';
 import { AddressesModule } from './addresses/addresses-module';
+import { PersonsModule } from './persons/persons.module';
+import { PersonEntity } from './@datas/PersonEntity';
 
 @Module({
   imports: [
@@ -20,11 +22,12 @@ import { AddressesModule } from './addresses/addresses-module';
         trustServerCertificate: true,
         useUTC: true,
       },
-      entities: [AddressEntity, DivingClubEntity],
+      entities: [AddressEntity, DivingClubEntity, PersonEntity],
       synchronize: true,
     }),
     DivingClubsModule,
     AddressesModule,
+    PersonsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

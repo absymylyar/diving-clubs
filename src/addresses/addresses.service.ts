@@ -32,6 +32,12 @@ export class AddressesService extends BaseService<Address> {
     }, entity);
     return (await this.saveEntities(entity))?.[0];
   }
+  mapAddress(address: Address): AddressEntity {
+    return Object.keys(address).reduce((e, key) => {
+      e[key] = address[key];
+      return e;
+    }, new AddressEntity());
+  }
   async patchAddress(address: AddressPatchDto): Promise<Address> {
     let result =
       (await this.getAddress(address.id)) ??

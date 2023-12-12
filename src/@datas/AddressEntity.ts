@@ -1,6 +1,7 @@
 import { Address } from '../@models/address';
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 import { DivingClubEntity } from './DivingClubEntity';
+import { PersonEntity } from './PersonEntity';
 
 @Entity()
 export class AddressEntity implements Address {
@@ -16,4 +17,5 @@ export class AddressEntity implements Address {
   city: string;
 
   clubs: DivingClubEntity[];
+  persons: PersonEntity[];
 }
