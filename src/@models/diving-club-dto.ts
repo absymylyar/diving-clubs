@@ -9,4 +9,6 @@ export class DivingClubDto implements DivingClub {
   address: AddressDto;
   @ApiProperty()
   id?: number | undefined;
+  @ApiProperty()
+  phoneNumber: string;
 }

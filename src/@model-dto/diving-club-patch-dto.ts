@@ -7,4 +7,6 @@ export class DivingClubPatchDto extends IdentifierDto {
   name?: string;
   @ApiProperty()
   address?: AddressPatchDto;
+  @ApiProperty()
+  phoneNumber?: string;
 }

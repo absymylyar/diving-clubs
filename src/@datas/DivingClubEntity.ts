@@ -8,6 +8,8 @@ export class DivingClubEntity implements DivingClub {
   id: number;
   @Column()
   name: string;
+  @Column()
+  phoneNumber: string;
   @ManyToOne((type) => AddressEntity, (address) => address.clubs)
   address: AddressEntity;
 }
