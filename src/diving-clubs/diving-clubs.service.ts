@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DivingClub } from '../@models/diving-club';
 import { BaseService } from '../@core/base-service';
-import { AddressesService } from '../addresses/addresses.service';
+// import { AddressesService } from '../addresses/addresses.service';
 import { DivingClubPatchDto } from '../@model-dto/diving-club-patch-dto';
 import { AddressPatchDto } from 'src/@model-dto/address-patch-dto';
 import { InjectRepository } from '@nestjs/typeorm';

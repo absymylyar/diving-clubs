@@ -1,9 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { DivingClubsController } from './diving-clubs/diving-clubs.controller';
-import { DivingClubsService } from './diving-clubs/diving-clubs.service';
-import { AddressesService } from './addresses/addresses.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DivingClubsModule } from './diving-clubs/diving-clubs-module';
 import { AddressEntity } from './@datas/AddressEntity';

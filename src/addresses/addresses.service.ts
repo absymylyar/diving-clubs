@@ -8,16 +8,6 @@ import { DataSource, Repository } from 'typeorm';
 
 @Injectable()
 export class AddressesService extends BaseService<Address> {
-  // protected override models: Address[] = [
-  //   {
-  //     city: 'Rennes',
-  //     id: 1,
-  //     street: 'Rue de la mer',
-  //     streetNumber: '123 bis',
-  //     zipCode: '35000',
-  //   },
-  // ];
-
   constructor(
     @InjectRepository(AddressEntity)
     protected readonly repository: Repository<AddressEntity>,
@@ -34,13 +24,18 @@ export class AddressesService extends BaseService<Address> {
     return this.repository.findOneBy({ id });
   }
 
-  async saveAdress(address: Address): Promise<Address> {
-    return (await this.saveEntities(address))?.[0];
+  async saveAddress(address: Address): Promise<Address> {
+    let entity = new AddressEntity();
+    entity = Object.keys(address).reduce((e, key) => {
+      e[key] = address[key];
+      return e;
+    }, entity);
+    return (await this.saveEntities(entity))?.[0];
   }
   async patchAddress(address: AddressPatchDto): Promise<Address> {
     let result =
       (await this.getAddress(address.id)) ??
-      (await this.saveAdress({
+      (await this.saveAddress({
         city: address.city ?? '',
         street: address.street ?? '',
         streetNumber: address.streetNumber ?? '',
@@ -50,7 +45,7 @@ export class AddressesService extends BaseService<Address> {
       (prev, curr) => (prev[curr] = address[curr]),
       result,
     );
-    return this.saveAdress(result);
+    return this.saveAddress(result);
   }
   async deleteAddress(id: number): Promise<Address> {
     const result = await this.getAddress(id);
