@@ -9,5 +9,6 @@ import { MonitorsControler } from './monitors.controler';
   imports: [PersonsModule, TypeOrmModule.forFeature([MonitorEntity])],
   providers: [MonitorsService],
   controllers: [MonitorsControler],
+  exports: [MonitorsService],
 })
 export class MonitorsModule {}

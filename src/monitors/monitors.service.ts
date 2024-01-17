@@ -1,12 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { BaseService } from '../@core/base-service';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DataSource, Repository } from 'typeorm';
-import { Monitor } from 'src/@models/monitor';
+import { DataSource, FindManyOptions, Repository, In } from 'typeorm';
+import { MonitorModel } from 'src/@models/monitor';
 import { MonitorEntity } from 'src/@datas/MonitorEntity';
 import { PersonsService } from 'src/persons/persons.service';
 import { MonitorDto } from 'src/@model-dto/monitor-dto';
-import { PersonEntity } from 'src/@datas/PersonEntity';
 
 @Injectable()
 export class MonitorsService extends BaseService<MonitorEntity> {
@@ -19,8 +18,16 @@ export class MonitorsService extends BaseService<MonitorEntity> {
     super(dataSource);
   }
 
-  async getMonitors(): Promise<MonitorDto[]> {
-    const montitors = await this.repository.find();
+  async getMonitors(...ids: number[]): Promise<MonitorDto[]> {
+    let where: FindManyOptions<MonitorEntity> = undefined;
+    if (ids?.length > 0) {
+      where = {
+        where: {
+          id: In(ids),
+        },
+      };
+    }
+    const montitors = await this.repository.find(where);
     return this.mapEntityToDto(...montitors);
   }
 
@@ -37,7 +44,7 @@ export class MonitorsService extends BaseService<MonitorEntity> {
     }));
   }
 
-  async saveMonitor(monitor: MonitorDto): Promise<Monitor> {
+  async saveMonitor(monitor: MonitorDto): Promise<MonitorModel> {
     const person = this.personsService.mapPersonEntity(
       await this.personsService.savePerson(monitor),
     );

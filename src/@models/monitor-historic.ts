@@ -1,8 +1,8 @@
 import { DivingClub } from './diving-club';
-import { Monitor } from './monitor';
+import { MonitorModel } from './monitor';
 
 export interface MonitorHistoric {
-  monitor: Monitor;
+  monitor: MonitorModel;
   club: DivingClub;
   startDate: Date;
   endDate?: Date;

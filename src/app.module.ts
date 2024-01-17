@@ -10,27 +10,51 @@ import { PersonsModule } from './persons/persons.module';
 import { PersonEntity } from './@datas/PersonEntity';
 import { MonitorsModule } from './monitors/monitors.module';
 import { MonitorEntity } from './@datas/MonitorEntity';
+import { LicenceEntity } from './@datas/LicenceEntity';
+import { DivingGroupEntity } from './@datas/DivingGroupEntity';
+import { DivingGroupsModule } from './diving-groups/diving-groups.module';
+import { LicencesModule } from './licences/licences.module';
 
 @Module({
   imports: [
+    // TypeOrmModule.forRoot({
+    //   type: 'mssql',
+    //   host: 'SURFACE-DAVID\\SQLEXPRESS',
+    //   port: 1433,
+    //   username: 'sa',
+    //   password: '123456pw$',
+    //   database: 'DivingClubs',
+    //   options: {
+    //     trustServerCertificate: true,
+    //     useUTC: true,
+    //   },
     TypeOrmModule.forRoot({
       type: 'mssql',
-      host: 'SURFACE-DAVID\\SQLEXPRESS',
+      host: 'DAVID-PC-DEC16\\SQLEXPRESS',
       port: 1433,
       username: 'sa',
-      password: '123456pw$',
+      password: '$StarWars$2021',
       database: 'DivingClubs',
       options: {
         trustServerCertificate: true,
         useUTC: true,
       },
-      entities: [AddressEntity, DivingClubEntity, PersonEntity, MonitorEntity],
+      entities: [
+        AddressEntity,
+        DivingClubEntity,
+        PersonEntity,
+        MonitorEntity,
+        LicenceEntity,
+        DivingGroupEntity,
+      ],
       synchronize: true,
     }),
     DivingClubsModule,
     AddressesModule,
     PersonsModule,
     MonitorsModule,
+    LicencesModule,
+    DivingGroupsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

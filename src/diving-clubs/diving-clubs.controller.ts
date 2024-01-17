@@ -14,15 +14,9 @@ import {
 import { DivingClubsService } from './diving-clubs.service';
 import { DivingClubDto } from '../@models/diving-club-dto';
 
-@Controller('diving-clubs')
-export class DivingClubsController {
+@Controller('diving-club')
+export class DivingClubController {
   constructor(private readonly service: DivingClubsService) {}
-
-  @Get('/')
-  async getDivingClubs(@Res() res) {
-    const result = await this.service.getDivingClubs();
-    return res.status(HttpStatus.OK).json(result);
-  }
 
   @Get('/:id')
   async getDivingClub(@Res() res, @Param('id', ParseIntPipe) id: number) {
@@ -43,7 +37,7 @@ export class DivingClubsController {
   }
 
   @Put('/:id')
-  async editTodo(
+  async editDivingClub(
     @Res() res,
     @Param('id', ParseIntPipe) id: number,
     @Body() updatedItem: DivingClubDto,
@@ -65,7 +59,7 @@ export class DivingClubsController {
   }
 
   @Delete('/:id')
-  async deleteTodo(@Res() res, @Param('id', ParseIntPipe) id: number) {
+  async deleteDivingClub(@Res() res, @Param('id', ParseIntPipe) id: number) {
     const deletedItem = await this.service.deleteDivingClub(id);
     if (!deletedItem) {
       throw new NotFoundException('Diving club does not exist!');
@@ -74,5 +68,16 @@ export class DivingClubsController {
       message: 'Diving club has been deleted!',
       todo: deletedItem,
     });
+  }
+}
+
+@Controller('diving-clubs')
+export class DivingClubsController {
+  constructor(private readonly service: DivingClubsService) {}
+
+  @Get('/')
+  async getDivingClubs(@Res() res) {
+    const result = await this.service.getDivingClubs();
+    return res.status(HttpStatus.OK).json(result);
   }
 }

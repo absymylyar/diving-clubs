@@ -21,13 +21,13 @@ export class PersonsController {
   constructor(private readonly service: PersonsService) {}
 
   @Get('/')
-  async getDivingClubs(@Res() res) {
+  async getPersons(@Res() res) {
     const result = await this.service.getPersons();
     return res.status(HttpStatus.OK).json(result);
   }
 
   @Get('/:id')
-  async getDivingClub(@Res() res, @Param('id', ParseIntPipe) id: number) {
+  async getPerson(@Res() res, @Param('id', ParseIntPipe) id: number) {
     const result = await this.service.getPerson(id);
     if (!result) {
       throw new NotFoundException('Diving club does not exist!');
