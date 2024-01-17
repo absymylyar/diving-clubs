@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { BaseService } from '../@core/base-service';
 import { InjectRepository } from '@nestjs/typeorm';
