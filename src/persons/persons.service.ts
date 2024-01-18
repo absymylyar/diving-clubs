@@ -9,6 +9,7 @@ import { PersonPatchDto } from '../@model-dto/person-patch-dto';
 import { PersonDto } from '../@model-dto/person-dto';
 import { AddressesService } from '../addresses/addresses.service';
 import { AddressDto } from 'src/@models/address-dto';
+import { LicenceEntity } from 'src/@datas/LicenceEntity';
 
 @Injectable()
 export class PersonsService extends BaseService<Person> {
@@ -42,6 +43,9 @@ export class PersonsService extends BaseService<Person> {
     const result = await this.getPerson(id);
     await this.repository.delete(id);
     return result;
+  }
+  async getPersonLicences(id: number): Promise<LicenceEntity[]> {
+    return (await this.repository.findOneBy({ id })).licences;
   }
   mapPersonEntity(person: Person): PersonEntity {
     return Object.keys(person).reduce(

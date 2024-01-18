@@ -6,11 +6,13 @@ import {
   ManyToOne,
   ManyToMany,
   JoinTable,
+  OneToMany,
 } from 'typeorm';
 import { AddressEntity } from './AddressEntity';
 import { Person } from '../@models/person';
 import { MonitorEntity } from './MonitorEntity';
 import { DivingGroupEntity } from './DivingGroupEntity';
+import { LicenceEntity } from './LicenceEntity';
 
 @Entity()
 export class PersonEntity implements Person {
@@ -34,4 +36,7 @@ export class PersonEntity implements Person {
   @ManyToMany((type) => DivingGroupEntity, (dg) => dg.divers)
   @JoinTable()
   dives: Promise<DivingGroupEntity[]>;
+
+  @OneToMany((type) => LicenceEntity, (l) => l.person)
+  licences: Promise<LicenceEntity[]>;
 }

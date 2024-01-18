@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { BaseService } from 'src/@core/base-service';
@@ -60,7 +61,7 @@ export class LicencesService extends BaseService<LicenceEntity> {
     entity.dateEnd = endDate;
     entity.rank = dto.rank;
 
-    const licences = (await this.getLicencesByPerson(dto.personId))
+    const licences = (await this.personsService.getPersonLicences(dto.personId))
       .filter(({ dateEnd }) => {
         const de = new Date(dateEnd).getDate();
         return (
