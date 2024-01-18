@@ -35,6 +35,9 @@ export class MonitorsService extends BaseService<MonitorEntity> {
     }
     return this.repository.find(where);
   }
+  async getMonitorEntity(id:number):Promise<MonitorEntity> {
+    return (await this.getMonitorEntities(id))?.[0];
+  }
 
   async getMonitor(id: number): Promise<MonitorDto> {
     const monitor = await this.repository.findOneBy({ id });

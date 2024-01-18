@@ -1,12 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class LicenceDto {
+export class DivingGroupDto {
   @ApiProperty()
-  personId: number;
+  monitorId: number;
   @ApiProperty()
   clubId: number;
   @ApiProperty()
-  rank: number;
-  @ApiProperty()
-  startDate: Date;
+  minimumRank: number;
 }

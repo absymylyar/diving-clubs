@@ -17,28 +17,28 @@ import { LicencesModule } from './licences/licences.module';
 
 @Module({
   imports: [
-    // TypeOrmModule.forRoot({
-    //   type: 'mssql',
-    //   host: 'SURFACE-DAVID\\SQLEXPRESS',
-    //   port: 1433,
-    //   username: 'sa',
-    //   password: '123456pw$',
-    //   database: 'DivingClubs',
-    //   options: {
-    //     trustServerCertificate: true,
-    //     useUTC: true,
-    //   },
     TypeOrmModule.forRoot({
       type: 'mssql',
-      host: 'DAVID-PC-DEC16\\SQLEXPRESS',
+      host: 'SURFACE-DAVID\\SQLEXPRESS',
       port: 1433,
       username: 'sa',
-      password: '$StarWars$2021',
+      password: '123456pw$',
       database: 'DivingClubs',
       options: {
         trustServerCertificate: true,
         useUTC: true,
       },
+    // TypeOrmModule.forRoot({
+    //   type: 'mssql',
+    //   host: 'DAVID-PC-DEC16\\SQLEXPRESS',
+    //   port: 1433,
+    //   username: 'sa',
+    //   password: '$StarWars$2021',
+    //   database: 'DivingClubs',
+    //   options: {
+    //     trustServerCertificate: true,
+    //     useUTC: true,
+    //   },
       entities: [
         AddressEntity,
         DivingClubEntity,
