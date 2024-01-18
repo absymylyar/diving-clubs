@@ -20,6 +20,11 @@ export class MonitorsService extends BaseService<MonitorEntity> {
   }
 
   async getMonitors(...ids: number[]): Promise<MonitorDto[]> {
+    const montitors = await this.getMonitorEntities(...ids);
+    return this.mapEntityToDto(...montitors);
+  }
+
+  getMonitorEntities(...ids: number[]): Promise<MonitorEntity[]> {
     let where: FindManyOptions<MonitorEntity> = undefined;
     if (ids?.length > 0) {
       where = {
@@ -28,8 +33,7 @@ export class MonitorsService extends BaseService<MonitorEntity> {
         },
       };
     }
-    const montitors = await this.repository.find(where);
-    return this.mapEntityToDto(...montitors);
+    return this.repository.find(where);
   }
 
   async getMonitor(id: number): Promise<MonitorDto> {
