@@ -45,7 +45,8 @@ export class PersonsService extends BaseService<Person> {
     return result;
   }
   async getPersonLicences(id: number): Promise<LicenceEntity[]> {
-    return (await this.repository.findOneBy({ id })).licences;
+    const result = (await this.repository.findOneBy({ id })).licences;
+    return result;
   }
   /**
    * Get active diving licence from a person at a given date.
@@ -57,11 +58,16 @@ export class PersonsService extends BaseService<Person> {
     personId: number,
     date: Date,
   ): Promise<LicenceEntity> {
-    return (await this.getPersonLicences(personId))?.find(
+    const tmp = await this.getPersonLicences(personId);
+    console.info(tmp);
+    const d = new Date(date);
+    console.info(d);
+    const result = tmp?.find(
       ({ dateEnd, dateStart }) =>
-        dateEnd.getDate() >= date.getDate() &&
-        dateStart.getDate() <= date.getDate(),
+        dateEnd.getTime() >= d.getTime() && dateStart.getTime() <= d.getTime(),
     );
+    console.info(result);
+    return result;
   }
 
   mapPersonEntity(person: Person): PersonEntity {

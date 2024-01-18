@@ -11,6 +11,13 @@ import { DivingGroupDto } from '../@model-dto/diving-group-dto';
 import { MonitorException } from '../@exceptions/monitor-exception';
 import { DataSource, Repository } from 'typeorm';
 import { DivingClubEntity } from 'src/@datas/DivingClubEntity';
+import { AddDiverToDivingGroupDto } from 'src/@model-dto/add-diver-to-diving-group-dto';
+import { Person } from 'src/@models/person';
+import {
+  DiverException,
+  DiverExceptionType,
+} from 'src/@exceptions/diver-exception';
+import { PersonEntity } from 'src/@datas/PersonEntity';
 
 @Injectable()
 export class DivingGroupsService extends BaseService<DivingGroupEntity> {
@@ -35,6 +42,36 @@ export class DivingGroupsService extends BaseService<DivingGroupEntity> {
     )?.[0];
   }
 
+  async addDiverToDivingGroup(
+    dto: AddDiverToDivingGroupDto,
+  ): Promise<Person[]> {
+    const dg = await this.repository.findOneBy({ id: dto.divingGroupId });
+    if (!dg) {
+      throw new NotFoundException('Diving group does not exist!');
+    }
+    const diver = (await this.personsService.getPerson(
+      dto.diverId,
+    )) as PersonEntity;
+    if (!diver) {
+      throw new NotFoundException('Diver does not exist!');
+    }
+    const licence = await this.personsService.getPersonActiveLicence(
+      dto.diverId,
+      dg.date,
+    );
+    if (!licence) {
+      throw new DiverException(DiverExceptionType.MissingLicence);
+    }
+    if (licence.rank < dg.minimumRank) {
+      throw new DiverException(DiverExceptionType.MissingRank);
+    }
+    const divers = [...(await dg.divers), diver];
+    dg.divers = Promise.resolve(divers);
+    const toto = await this.saveEntity(dg);
+    console.info(toto);
+    return divers;
+  }
+
   async createDivingGroup(dto: DivingGroupDto): Promise<DivingGroupModel> {
     const monitor = await this.monitorsService.getMonitorEntity(dto.monitorId);
     if (!monitor) {
@@ -51,7 +88,8 @@ export class DivingGroupsService extends BaseService<DivingGroupEntity> {
     entity.minimumRank = dto.minimumRank;
     entity.date = dto.date;
     entity = await this.saveEntity(entity);
-    return this.mapEntityToModel(entity);
+    console.info(entity);
+    return this.getDivingGroup(entity.id);
   }
 
   private async mapEntityToModel(

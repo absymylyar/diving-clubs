@@ -16,7 +16,8 @@ export abstract class BaseService<TModel extends Identifier> {
     return result;
   }
   async saveEntity(model: TModel): Promise<TModel> {
-    return (await this.saveEntities(model))?.[0];
+    const result = (await this.saveEntities(model))?.[0];
+    return result;
   }
 
   // protected getNextId(models: TModel[]): number {
