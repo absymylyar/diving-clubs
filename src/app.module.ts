@@ -14,6 +14,7 @@ import { LicenceEntity } from './@datas/LicenceEntity';
 import { DivingGroupEntity } from './@datas/DivingGroupEntity';
 import { DivingGroupsModule } from './diving-groups/diving-groups.module';
 import { LicencesModule } from './licences/licences.module';
+import { NotificationsModule } from './notifications/notifications.module';
 
 @Module({
   imports: [
@@ -28,17 +29,17 @@ import { LicencesModule } from './licences/licences.module';
         trustServerCertificate: true,
         useUTC: true,
       },
-    // TypeOrmModule.forRoot({
-    //   type: 'mssql',
-    //   host: 'DAVID-PC-DEC16\\SQLEXPRESS',
-    //   port: 1433,
-    //   username: 'sa',
-    //   password: '$StarWars$2021',
-    //   database: 'DivingClubs',
-    //   options: {
-    //     trustServerCertificate: true,
-    //     useUTC: true,
-    //   },
+      // TypeOrmModule.forRoot({
+      //   type: 'mssql',
+      //   host: 'DAVID-PC-DEC16\\SQLEXPRESS',
+      //   port: 1433,
+      //   username: 'sa',
+      //   password: '$StarWars$2021',
+      //   database: 'DivingClubs',
+      //   options: {
+      //     trustServerCertificate: true,
+      //     useUTC: true,
+      //   },
       entities: [
         AddressEntity,
         DivingClubEntity,
@@ -55,6 +56,7 @@ import { LicencesModule } from './licences/licences.module';
     MonitorsModule,
     LicencesModule,
     DivingGroupsModule,
+    NotificationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

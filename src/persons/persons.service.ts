@@ -47,6 +47,12 @@ export class PersonsService extends BaseService<Person> {
   async getPersonLicences(id: number): Promise<LicenceEntity[]> {
     return (await this.repository.findOneBy({ id })).licences;
   }
+  /**
+   * Get active diving licence from a person at a given date.
+   * @param personId Person unidentifier.
+   * @param date Date of the check.
+   * @returns Promise of a licence.
+   */
   async getPersonActiveLicence(
     personId: number,
     date: Date,
