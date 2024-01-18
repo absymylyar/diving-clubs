@@ -7,4 +7,6 @@ export class DivingGroupDto {
   clubId: number;
   @ApiProperty()
   minimumRank: number;
+  @ApiProperty()
+  date: Date;
 }

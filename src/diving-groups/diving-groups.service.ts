@@ -49,6 +49,7 @@ export class DivingGroupsService extends BaseService<DivingGroupEntity> {
       dto.clubId,
     )) as DivingClubEntity;
     entity.minimumRank = dto.minimumRank;
+    entity.date = dto.date;
     entity = await this.saveEntity(entity);
     return this.mapEntityToModel(entity);
   }
