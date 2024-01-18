@@ -47,6 +47,17 @@ export class PersonsService extends BaseService<Person> {
   async getPersonLicences(id: number): Promise<LicenceEntity[]> {
     return (await this.repository.findOneBy({ id })).licences;
   }
+  async getPersonActiveLicence(
+    personId: number,
+    date: Date,
+  ): Promise<LicenceEntity> {
+    return (await this.getPersonLicences(personId))?.find(
+      ({ dateEnd, dateStart }) =>
+        dateEnd.getDate() >= date.getDate() &&
+        dateStart.getDate() <= date.getDate(),
+    );
+  }
+
   mapPersonEntity(person: Person): PersonEntity {
     return Object.keys(person).reduce(
       (prev, key) => this.mapPatchPerson(prev, key, person),
