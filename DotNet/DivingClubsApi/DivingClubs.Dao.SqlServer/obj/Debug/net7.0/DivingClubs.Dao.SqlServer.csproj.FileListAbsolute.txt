@@ -1,0 +1,17 @@
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.csproj.AssemblyReference.cache
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.AssemblyInfoInputs.cache
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.AssemblyInfo.cs
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.csproj.CoreCompileInputs.cache
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\bin\Debug\net7.0\DivingClubs.Dao.SqlServer.deps.json
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\bin\Debug\net7.0\DivingClubs.Dao.SqlServer.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\bin\Debug\net7.0\DivingClubs.Dao.SqlServer.pdb
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\bin\Debug\net7.0\DivingClubs.Interfaces.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\bin\Debug\net7.0\DivingClubs.Models.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\bin\Debug\net7.0\DivingClubs.Interfaces.pdb
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\bin\Debug\net7.0\DivingClubs.Models.pdb
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.csproj.CopyComplete
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\refint\DivingClubs.Dao.SqlServer.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\DivingClubs.Dao.SqlServer.pdb
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Dao.SqlServer\obj\Debug\net7.0\ref\DivingClubs.Dao.SqlServer.dll

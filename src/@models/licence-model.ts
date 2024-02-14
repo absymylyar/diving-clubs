@@ -7,5 +7,5 @@ export interface LicenceModel extends Identifier {
   club: DivingClub;
   rank: number;
   dateStart: Date;
-  dateEnd: Date;
+  dateEnd?: Date;
 }

@@ -15,31 +15,32 @@ import { DivingGroupEntity } from './@datas/DivingGroupEntity';
 import { DivingGroupsModule } from './diving-groups/diving-groups.module';
 import { LicencesModule } from './licences/licences.module';
 import { NotificationsModule } from './notifications/notifications.module';
+import { NotificationsService } from './notifications/notifications-service';
 
 @Module({
   imports: [
+    // TypeOrmModule.forRoot({
+    //   type: 'mssql',
+    //   host: 'SURFACE-DAVID\\SQLEXPRESS',
+    //   port: 1433,
+    //   username: 'sa',
+    //   password: '123456pw$',
+    //   database: 'DivingClubs',
+    //   options: {
+    //     trustServerCertificate: true,
+    //     useUTC: true,
+    //   },
     TypeOrmModule.forRoot({
       type: 'mssql',
-      host: 'SURFACE-DAVID\\SQLEXPRESS',
+      host: 'DAVID-PC-DEC16\\SQLEXPRESS',
       port: 1433,
       username: 'sa',
-      password: '123456pw$',
+      password: '$StarWars$2021',
       database: 'DivingClubs',
       options: {
         trustServerCertificate: true,
         useUTC: true,
       },
-      // TypeOrmModule.forRoot({
-      //   type: 'mssql',
-      //   host: 'DAVID-PC-DEC16\\SQLEXPRESS',
-      //   port: 1433,
-      //   username: 'sa',
-      //   password: '$StarWars$2021',
-      //   database: 'DivingClubs',
-      //   options: {
-      //     trustServerCertificate: true,
-      //     useUTC: true,
-      //   },
       entities: [
         AddressEntity,
         DivingClubEntity,
@@ -56,9 +57,8 @@ import { NotificationsModule } from './notifications/notifications.module';
     MonitorsModule,
     LicencesModule,
     DivingGroupsModule,
-    NotificationsModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, NotificationsService],
 })
 export class AppModule {}

@@ -18,6 +18,7 @@ import {
   DiverExceptionType,
 } from 'src/@exceptions/diver-exception';
 import { PersonEntity } from 'src/@datas/PersonEntity';
+import { ViewDivingGroupWithCountDivers } from 'src/@datas/ViewDivingGroupWithCountDivers';
 
 @Injectable()
 export class DivingGroupsService extends BaseService<DivingGroupEntity> {
@@ -40,6 +41,10 @@ export class DivingGroupsService extends BaseService<DivingGroupEntity> {
     return (
       await this.mapEntitiesToModels(await this.repository.findOneBy({ id }))
     )?.[0];
+  }
+
+  getDivingGroupWithDivers(): Promise<ViewDivingGroupWithCountDivers[]> {
+    return this.dataSource.manager.find(ViewDivingGroupWithCountDivers);
   }
 
   async addDiverToDivingGroup(
@@ -65,11 +70,11 @@ export class DivingGroupsService extends BaseService<DivingGroupEntity> {
     if (licence.rank < dg.minimumRank) {
       throw new DiverException(DiverExceptionType.MissingRank);
     }
-    const divers = [...(await dg.divers), diver];
+    const divers = [...(await dg.divers), licence];
     dg.divers = Promise.resolve(divers);
     const toto = await this.saveEntity(dg);
     console.info(toto);
-    return divers;
+    return divers?.map(({ person }) => person);
   }
 
   async createDivingGroup(dto: DivingGroupDto): Promise<DivingGroupModel> {

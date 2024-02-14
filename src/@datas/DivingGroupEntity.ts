@@ -10,6 +10,7 @@ import { MonitorEntity } from './MonitorEntity';
 import { DivingClubEntity } from './DivingClubEntity';
 import { Identifier } from 'src/@models/Identifier';
 import { PersonEntity } from './PersonEntity';
+import { LicenceEntity } from './LicenceEntity';
 
 @Entity()
 export class DivingGroupEntity implements Identifier {
@@ -24,6 +25,6 @@ export class DivingGroupEntity implements Identifier {
   monitor: MonitorEntity;
   @ManyToOne((type) => DivingClubEntity, (dc) => dc.divingGroups)
   club: DivingClubEntity;
-  @ManyToMany((type) => PersonEntity, (dg) => dg.dives)
-  divers: Promise<PersonEntity[]>;
+  @ManyToMany((type) => LicenceEntity, (dg) => dg.dives)
+  divers: Promise<LicenceEntity[]>;
 }

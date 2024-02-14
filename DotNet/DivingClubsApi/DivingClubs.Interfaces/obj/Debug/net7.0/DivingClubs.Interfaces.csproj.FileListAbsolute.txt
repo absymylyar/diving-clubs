@@ -1,0 +1,15 @@
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\bin\Debug\net7.0\DivingClubs.Interfaces.deps.json
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\bin\Debug\net7.0\DivingClubs.Interfaces.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\bin\Debug\net7.0\DivingClubs.Interfaces.pdb
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\bin\Debug\net7.0\DivingClubs.Models.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\bin\Debug\net7.0\DivingClubs.Models.pdb
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.csproj.AssemblyReference.cache
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.AssemblyInfoInputs.cache
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.AssemblyInfo.cs
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.csproj.CoreCompileInputs.cache
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.csproj.CopyComplete
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\refint\DivingClubs.Interfaces.dll
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\DivingClubs.Interfaces.pdb
+D:\Dev\diving-clubs\DotNet\DivingClubsApi\DivingClubs.Interfaces\obj\Debug\net7.0\ref\DivingClubs.Interfaces.dll

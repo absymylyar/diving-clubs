@@ -1,0 +1,184 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Business\\DivingClubs.Business.csproj": {}
+  },
+  "projects": {
+    "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Business\\DivingClubs.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Business\\DivingClubs.Business.csproj",
+        "projectName": "DivingClubs.Business",
+        "projectPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Business\\DivingClubs.Business.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Interfaces\\DivingClubs.Interfaces.csproj": {
+                "projectPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Interfaces\\DivingClubs.Interfaces.csproj"
+              },
+              "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\DivingClubs.Models.csproj": {
+                "projectPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\DivingClubs.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Interfaces\\DivingClubs.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Interfaces\\DivingClubs.Interfaces.csproj",
+        "projectName": "DivingClubs.Interfaces",
+        "projectPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Interfaces\\DivingClubs.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\DivingClubs.Models.csproj": {
+                "projectPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\DivingClubs.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\DivingClubs.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\DivingClubs.Models.csproj",
+        "projectName": "DivingClubs.Models",
+        "projectPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\DivingClubs.Models.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\diving-clubs\\DotNet\\DivingClubsApi\\DivingClubs.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

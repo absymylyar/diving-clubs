@@ -1,0 +1,67 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "DivingClubsContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Datas",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "DivingClubs.Dao.SqlServer",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[address_entity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[diving_club_entity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[diving_group_entity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[licence_entity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[licence_entity_dives_diving_group_entity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[monitor_entity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[person_entity]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "david-pc-dec16\\sqlexpress.DivingClubs.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

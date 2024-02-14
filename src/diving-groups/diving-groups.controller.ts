@@ -18,7 +18,7 @@ import { ApiTags } from '@nestjs/swagger';
 export class DivingGroupController {
   constructor(private readonly service: DivingGroupsService) {}
   @Get('/:id')
-  async getDivingGroupClub(@Res() res, @Param('id', ParseIntPipe) id: number) {
+  async getDivingGroup(@Res() res, @Param('id', ParseIntPipe) id: number) {
     const result = await this.service.getDivingGroup(id);
     if (!result) {
       throw new NotFoundException('Diving club does not exist!');
@@ -40,4 +40,10 @@ export class DivingGroupController {
 @Controller('diving-groups')
 export class DivingGroupsController {
   constructor(private readonly service: DivingGroupsService) {}
+  
+  @Get('/')
+  async getDivingGroup(@Res() res){
+    const result = await this.service.getDivingGroupWithDivers();
+    return res.status(HttpStatus.OK).json(result);
+  }
 }

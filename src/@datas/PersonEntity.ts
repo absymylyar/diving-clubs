@@ -33,9 +33,6 @@ export class PersonEntity implements Person {
   address: AddressEntity;
 
   monitor?: MonitorEntity;
-  @ManyToMany((type) => DivingGroupEntity, (dg) => dg.divers)
-  @JoinTable()
-  dives: Promise<DivingGroupEntity[]>;
 
   @OneToMany((type) => LicenceEntity, (l) => l.person)
   licences: Promise<LicenceEntity[]>;

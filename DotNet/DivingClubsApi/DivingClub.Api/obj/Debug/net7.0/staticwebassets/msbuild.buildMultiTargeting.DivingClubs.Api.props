@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DivingClubs.Api.props" />
+</Project>

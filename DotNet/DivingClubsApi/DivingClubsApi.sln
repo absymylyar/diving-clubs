@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivingClubs.Api", "DivingClub.Api\DivingClubs.Api.csproj", "{DAD65A71-501D-4EB6-B1DD-2C58AC3C835A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivingClubs.Dao.SqlServer", "DivingClubs.Dao.SqlServer\DivingClubs.Dao.SqlServer.csproj", "{6B908AC7-7675-49CC-A8E5-B17B48CA61E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivingClubs.Models", "DivingClubs.Models\DivingClubs.Models.csproj", "{88E10503-EE1E-4761-A0BF-B0CC21B45327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivingClubs.Interfaces", "DivingClubs.Interfaces\DivingClubs.Interfaces.csproj", "{01B0C02C-D142-4C0D-B632-0169AD2F352B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivingClubs.Business", "DivingClubs.Business\DivingClubs.Business.csproj", "{877CDE01-B5EA-4C02-ADD0-FE0ACA125CAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAD65A71-501D-4EB6-B1DD-2C58AC3C835A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD65A71-501D-4EB6-B1DD-2C58AC3C835A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD65A71-501D-4EB6-B1DD-2C58AC3C835A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD65A71-501D-4EB6-B1DD-2C58AC3C835A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B908AC7-7675-49CC-A8E5-B17B48CA61E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B908AC7-7675-49CC-A8E5-B17B48CA61E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B908AC7-7675-49CC-A8E5-B17B48CA61E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B908AC7-7675-49CC-A8E5-B17B48CA61E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E10503-EE1E-4761-A0BF-B0CC21B45327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E10503-EE1E-4761-A0BF-B0CC21B45327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E10503-EE1E-4761-A0BF-B0CC21B45327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E10503-EE1E-4761-A0BF-B0CC21B45327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B0C02C-D142-4C0D-B632-0169AD2F352B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B0C02C-D142-4C0D-B632-0169AD2F352B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B0C02C-D142-4C0D-B632-0169AD2F352B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B0C02C-D142-4C0D-B632-0169AD2F352B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877CDE01-B5EA-4C02-ADD0-FE0ACA125CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877CDE01-B5EA-4C02-ADD0-FE0ACA125CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877CDE01-B5EA-4C02-ADD0-FE0ACA125CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877CDE01-B5EA-4C02-ADD0-FE0ACA125CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16B779F2-DE23-4D50-B76A-2963271F75D7}
+	EndGlobalSection
+EndGlobal
