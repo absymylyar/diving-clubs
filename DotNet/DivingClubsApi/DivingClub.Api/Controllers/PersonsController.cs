@@ -75,6 +75,12 @@ namespace DivingClubs.Api.Controllers
             return null;
         }
 
+        [HttpDelete("~/Person/{id}")]
+        public bool Delete(int id)
+        {
+            return this.business.Delete(id);
+        }
+
         //// GET: PersonController/Create
         //public ActionResult Create()
         //{
