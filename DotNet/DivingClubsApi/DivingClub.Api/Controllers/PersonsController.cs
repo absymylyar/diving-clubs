@@ -5,26 +5,75 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DivingClubs.Api.Controllers
 {
+    public record Person() : IPerson
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string BloodGroup { get; set; }
+        public IAddress Address { get; set; }
+        public int Id { get; set; }
+    }
+    public record PatchPerson()
+    {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? PhoneNumber { get; set; }
+        public DateTime? BirthDate { get; set; }
+        public string? BloodGroup { get; set; }
+        public IAddress? Address { get; set; }
+    }
+
     [ApiController]
     [Route("[controller]")]
     public class PersonsController : Controller
     {
-        //private readonly IBusiness<Person> business;
-        //public PersonsController(IBusiness<Person> business) {
-        //    this.business = business;
-        //}
+        private readonly IBusiness<IPerson> business;
+        public PersonsController(IBusiness<IPerson> business)
+        {
+            this.business = business;
+        }
         // GET: PersonController
         [HttpGet]
         public IEnumerable<IPerson> Get()
         {
-            return new List<IPerson>();
+            return this.business.Get();
         }
 
-        //// GET: PersonController/Details/5
-        //public ActionResult Details(int id)
-        //{
-        //    return View();
-        //}
+        [HttpGet("~/Person/{id}")]
+        public IPerson? Details(int id)
+        {
+            return this.business.Get(id);
+        }
+
+        [HttpPost("~/Person")]
+        public IPerson? Create(Person person)
+        {
+            return this.business.Save(person);
+        }
+
+        [HttpPatch("~/Person/{id}")]
+        public IPerson? Modify(int id, PatchPerson person)
+        {
+            var p = this.business.Get(id);
+            if (p != null)
+            {
+                typeof(PatchPerson)
+                    .GetProperties()
+                    .ToList()
+                    .ForEach(x =>
+                    {
+                        var value = x.GetValue(person);
+                        if (value != null)
+                        {
+                            p.GetType().GetProperty(x.Name)?.SetValue(p, value);
+                        }
+                    });
+                return this.business.Save(p);
+            }
+            return null;
+        }
 
         //// GET: PersonController/Create
         //public ActionResult Create()
